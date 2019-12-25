@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2019 at 07:23 AM
+-- Generation Time: Dec 25, 2019 at 01:48 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -155,7 +155,11 @@ INSERT INTO `user` (`id`, `username`, `password`, `name`, `role_id`) VALUES
 (3, '6872', '$2y$10$g7YrqIgS8huXaeZDqLKBaeBeruAqQfUpxmiZJttf1E8x3YwM5a5gK', 'Muhammad budiyanto', '1'),
 (4, '6873', '$2y$10$vyBj3bYW1h8ihR2JHC/raeJaUKacqfiFu5WjPVkcY8mhFw2ekiMcG', 'Muhdani Boyrendi', '1'),
 (5, '888', '$2y$10$Zwp2mN3ZGY8c8TlkIXKugeEji20Vy/7Z.9uFZtjyRzE.X2VSA7NvO', 'ardian setiawan', '1'),
-(6, '6212', '$2y$10$zirDNMbrN8tAyaEYgeBFYOTymkOq.a84l.TehZFub29QnMiSMg99C', 'adinda prilawati', '1');
+(6, '6212', '$2y$10$zirDNMbrN8tAyaEYgeBFYOTymkOq.a84l.TehZFub29QnMiSMg99C', 'adinda prilawati', '1'),
+(9, 'renobalap', '$2y$10$kpsqnzbeRfcJKXNprNekEOSaxSQ9D1enKJ2K6x.TgCg5vwuz9aw0a', 'reno', '1'),
+(10, 'sinta', '$2y$10$a5cLsk.2TxJY9vOFmlIp6eg8AnvqdoSWTieBB2Vbnw3wvaLSbSkI2', 'Shinta Umi Maisaroh', '1'),
+(11, 'esna', '$2y$10$OpxuqidZYTtfARL6Ga79M.cag..Q9XVUwBnRbt2dQzJ6fTlysz47O', 'esna Sahita', '1'),
+(12, 'Tika', '$2y$10$A0ppdUAC29vHGyO3HeHN3um8v5I7yJC6DjOuWLdANx/f3I6dqQ6Vi', 'Fatikah Nur Azzahra', '1');
 
 --
 -- Indexes for dumped tables
@@ -211,7 +215,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

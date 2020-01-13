@@ -34,7 +34,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link ">
+                <a href="<?= base_url(); ?>ManageDataSekolah" class="nav-link ">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>Manage Data Sekolah</p>
                 </a>

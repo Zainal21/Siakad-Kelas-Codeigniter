@@ -20,7 +20,7 @@ class M_ManageGuru extends CI_Model {
         'kode_mapel' => $this->input->post('kode_mapel'),
         'kode_jurusan' => $this->input->post('kode_jurusan')
       ];
-      $this->db->insert('guru', $data);
+      return $this->db->insert('guru', $data);
     }
     public function getbyid($id)
     {

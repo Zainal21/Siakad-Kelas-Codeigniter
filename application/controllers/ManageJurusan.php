@@ -12,7 +12,9 @@ class ManageJurusan extends CI_Controller {
     public function index()
     {
         $data['jurusan'] = $this->M_ManageJurusan->get();
-        $this->load->view('BackEnd/Master/ManageJurusan', $data);
+        $data = $this->load->view('BackEnd/Master/ManageJurusan', $data);
+         json_encode($data);
+
     }
 
         public function TambahData()
@@ -30,9 +32,10 @@ class ManageJurusan extends CI_Controller {
     }
     public function Hapus($id)
     {
-        $this->db->delete('jurusan', ['kode_jurusan' => $id]);
+       $delete = $this->db->delete('jurusan', ['kode_jurusan' => $id]);
             $this->session->set_flashdata('Data', 'DiHapus');
              redirect('ManageJurusan');
+             json_encode($delete);
     }
    
     

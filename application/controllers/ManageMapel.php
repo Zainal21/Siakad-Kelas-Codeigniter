@@ -13,6 +13,12 @@ class ManageMapel extends CI_Controller {
         $data['mapel'] = $this->M_ManageMapel->get();
         $this->load->view('BackEnd/Master/ManageMapel', $data);
     }
+
+    public function delete($id)
+    {
+        $this->m_ManageMapel->hapus($id);
+        redirect('ManageMapel');
+    }
    
     
     

@@ -6,4 +6,9 @@ class M_ManageMapel extends CI_Model {
     {
       return $this->db->get('mapel')->result_array();
     }
+    public function hapus($id)
+    {
+      $this->db->where('id', $id);
+      $this->db->delete('mapel');
+    }
 }

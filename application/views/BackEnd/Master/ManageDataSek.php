@@ -16,7 +16,7 @@
                         <div class="container mt-5">
                         <div class="row">
                           <div class="col-8">
-                            <?= form_open() ?>
+                            <?= form_open('ManageDatasekolah'); ?>
                               <div class="form-grup mt-4">
                                 <label for="">Nama Sekolah</label>
                                 <input type="text" class="form-control">
@@ -34,9 +34,9 @@
                           <div class="col-4">
                             <div class="card">
                               <div class="card-body">
-                                <h5 class="card-title">Nama Sekolah</h5>
-                                <h5 class="card-title">Alamat Sekolah</h5>
-                                <h5 class="card-title">Jenjang Sekolah</h5>
+                                <h5 class="card-text">Nama Sekolah</h5>
+                                <h5 class="card-text">Alamat Sekolah</h5>
+                                <h5 class="card-text">Jenjang Sekolah</h5>
                               </div>
                             </div>
                           </div>

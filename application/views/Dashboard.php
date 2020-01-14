@@ -75,6 +75,8 @@
     <!-- /.content -->
   </div>
 
+ 
+
 <?php $this->load->view('StructureView/Footer'); ?>
   
 

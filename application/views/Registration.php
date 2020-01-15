@@ -17,17 +17,18 @@
   <link rel="stylesheet" href="<?= base_url(); ?>assest/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
 </head>
-<body class="hold-transition register-page">
-<div class="register-box">
+<body class="hold-transition register-page body">
+<div class="register-box ">
   <div class="register-logo">
     <a href=""><b>Registration</b>Page</a>
   </div>
 
-  <div class="card">
+  <div class="card" >
     <div class="card-body register-card-body">
      
-      <form action="<?= base_url(); ?>Registration" method="post">
+      <form action="<?= base_url(); ?>Auth/Registration" method="post">
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Username" name="username">
             <div class="input-group-append">
@@ -55,13 +56,14 @@
           </div>
         </div>
         <small id="emailHelp" class="form-text text-danger "><?= form_error('nama') ?></small>
-        <div class="input-group mb-3">
-          <input type="number" class="form-control" placeholder="Role" name="role_id">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-edit"></span>
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Role</label>
+          <select class="form-control" id="exampleFormControlSelect1" name="role">
+            <?php foreach($role as $rl){ ?>
+              <option value="<?= $rl ?>"><?= $rl ?></option>
+             <?php } ?>
+           
+          </select>
         </div>
         <small id="emailHelp" class="form-text text-danger "><?= form_error('role_id') ?></small>
        

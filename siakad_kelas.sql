@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2019 at 01:48 PM
+-- Generation Time: Jan 15, 2020 at 01:52 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.6
 
@@ -40,11 +40,7 @@ CREATE TABLE `guru` (
 --
 
 INSERT INTO `guru` (`nip`, `nama`, `kode_mapel`, `kode_jurusan`) VALUES
-('1985033020', 'ardian setiawan', 'OR1', 'OTO'),
-('198503302003121', 'Muhamad Zainal Arifin', 'MT1', 'OTO'),
-('198503302003121243', 'adinda prilawati', 'MT1', 'OTO'),
-('19850330232', 'Maulazamah', 'OR1', 'RPL'),
-('19850331355', 'Hendra Agil', 'OR1', 'RPL');
+('19850330232213', 'Muhamad Zainal Arifin', 'OR1', 'MSN');
 
 -- --------------------------------------------------------
 
@@ -63,10 +59,10 @@ CREATE TABLE `jurusan` (
 
 INSERT INTO `jurusan` (`kode_jurusan`, `nama_jurusan`) VALUES
 ('MSN', 'Teknik Mesin'),
-('OTO', 'Teknik Ototronik'),
 ('RPL', 'Rekayasa Perangkat Lunak'),
 ('TBB', 'Busana Butik'),
-('TBO', 'Teknik Body Otomotif');
+('TBO', 'Teknik Body Otomotif'),
+('TBSM', 'Teknik Body Otomotif');
 
 -- --------------------------------------------------------
 
@@ -88,7 +84,8 @@ INSERT INTO `kelas` (`kode_kelas`, `nama_kelas`, `kode_jurusan`) VALUES
 ('MSN1', 'XIIMA', 'OTO'),
 ('RPL1', 'XIIRA', 'RPL'),
 ('RPL4', 'XIRA', 'RPL'),
-('RPL5', 'XI RB', 'RPL');
+('RPL5', 'XI RB', 'RPL'),
+('RRC', 'XIIRC', 'RPL');
 
 -- --------------------------------------------------------
 
@@ -142,24 +139,25 @@ CREATE TABLE `user` (
   `username` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
   `name` varchar(128) NOT NULL,
-  `role_id` varchar(1) NOT NULL
+  `role` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `name`, `role_id`) VALUES
-(1, 'admin', '$2y$10$874NcheT/j6GspwuIbPTpeJMFf7QueNPiPntI67/EXeWUgyXzUYD2', 'Muhamad Zainal Arifin', '1'),
-(2, '6871', '$2y$10$1ZS/TXwK1Us442WfFyBM1.wvhK83itLLkww4jEFS5TCwXhulTNYUe', 'Muhammad Afin', '1'),
-(3, '6872', '$2y$10$g7YrqIgS8huXaeZDqLKBaeBeruAqQfUpxmiZJttf1E8x3YwM5a5gK', 'Muhammad budiyanto', '1'),
-(4, '6873', '$2y$10$vyBj3bYW1h8ihR2JHC/raeJaUKacqfiFu5WjPVkcY8mhFw2ekiMcG', 'Muhdani Boyrendi', '1'),
-(5, '888', '$2y$10$Zwp2mN3ZGY8c8TlkIXKugeEji20Vy/7Z.9uFZtjyRzE.X2VSA7NvO', 'ardian setiawan', '1'),
-(6, '6212', '$2y$10$zirDNMbrN8tAyaEYgeBFYOTymkOq.a84l.TehZFub29QnMiSMg99C', 'adinda prilawati', '1'),
-(9, 'renobalap', '$2y$10$kpsqnzbeRfcJKXNprNekEOSaxSQ9D1enKJ2K6x.TgCg5vwuz9aw0a', 'reno', '1'),
-(10, 'sinta', '$2y$10$a5cLsk.2TxJY9vOFmlIp6eg8AnvqdoSWTieBB2Vbnw3wvaLSbSkI2', 'Shinta Umi Maisaroh', '1'),
-(11, 'esna', '$2y$10$OpxuqidZYTtfARL6Ga79M.cag..Q9XVUwBnRbt2dQzJ6fTlysz47O', 'esna Sahita', '1'),
-(12, 'Tika', '$2y$10$A0ppdUAC29vHGyO3HeHN3um8v5I7yJC6DjOuWLdANx/f3I6dqQ6Vi', 'Fatikah Nur Azzahra', '1');
+INSERT INTO `user` (`id`, `username`, `password`, `name`, `role`) VALUES
+(17, 'admin', '$2y$10$euQvFwKp.nTkoqp1O7FtEuglxN1vHjB8bMzvHO0AjFBKuDpOgjfLC', 'Muhamad Zainal Arifin', 'Admin'),
+(18, 'hendraagil', '$2y$10$g0XX2.v/YsPKxKGHF.o6QuKqPTzVKR0wUOtIhpVATFucuYt8et3N.', 'Hendra Agil', 'Siswa'),
+(19, 'adinda prilawati', '$2y$10$Cf5xTwVv5UD9uNXSJ9ldqekCl01mWzDXmQhf/31ImcXVQcq4jK3GW', 'adinda prilawati', 'Siswa'),
+(20, 'maskur', '$2y$10$pUsBCKAVmwjovDpAB4zRnep.eZZUDUBKMz7ss/V4J9F8I4XnVURlm', 'maskur anam', 'Siswa'),
+(21, 'sinta', '$2y$10$M2XJpGZ5BrtJZ/mbJqNQbupAVYHOOEG/J.kQU9hy5zZLJri6R2kxy', 'sinta umi maisaroh', 'Siswa'),
+(22, 'Reno', '$2y$10$yGb6.PJmnKrKJf.TzqCgA.LSbz03Qq2cYfqcjDkk0E.23pJXKgy7m', 'Reno adrianto', 'Guru'),
+(23, 'salam', '$2y$10$fcj8ziVZGtjJ1erH6IivpO1WCMcFzf67QnyNMIOhWDIrsQqIsHkx2', 'salam gento', 'Admin'),
+(24, 'ardian', '$2y$10$5zUiLVYvvaeA46jz2b6rae8nhhSog9Kiuyhs7Z1pR1tS26m9lsw/K', 'ardian setiawan', 'Admin'),
+(25, 'fatika', '$2y$10$UBHBOmsDcy4p0Nijdr/Ue.nzC1YP/Bo4kUynrZsj5L23UuxlO5f3K', 'Fatikah Nur Azzahra', 'Siswa'),
+(26, 'esna', '$2y$10$ECm43qvwLyfSQuvCnuRwf.eeHGMXW1.qH5Trl229FhiHrCFKufsom', 'esna Sahita', 'Siswa'),
+(27, 'mayasari', '$2y$10$AbUfyCPqk.mrePwn5HMLpueFAvWBv2z4.J1HbZTHRN4VZRuKxEbZi', 'mayasai j', 'Siswa');
 
 --
 -- Indexes for dumped tables
@@ -215,7 +213,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -7,6 +7,8 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
+        <div class="flash-data" data-flashdata="<?= $this->session->flashdata('Success'); ?>"></div>
+
               <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
@@ -75,9 +77,21 @@
     <!-- /.content -->
   </div>
 
- 
 
-<?php $this->load->view('StructureView/Footer'); ?>
+ 
   
+<script>
+const flashdata = $('.flash-data').data('flashdata');
+
+if(flashdata){
+  Swal({
+      title: 'Selamat',
+      text : '' + flashdata,
+      type :''
+  });
+}
+
+</script>
+<?php $this->load->view('StructureView/Footer'); ?>
 
 

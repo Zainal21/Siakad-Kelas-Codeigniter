@@ -8,7 +8,7 @@ class ManageKelas extends CI_Controller {
         $this->load->model('M_ManageKelas');
         $this->load->library('form_validation');
         $this->load->model('M_ManageJurusan');
-    }
+    }   
     public function index()
     {
         $data['kelas'] = $this->M_ManageKelas->get();
@@ -18,8 +18,8 @@ class ManageKelas extends CI_Controller {
     {
         
         $data['jurusan'] = $this->M_ManageJurusan->get();
-        $this->form_validation->set_rules('kode_kelas', 'kode mapel', 'required');
-        $this->form_validation->set_rules('nama_kelas', 'nama_kelas', 'required');
+        $this->form_validation->set_rules('username', 'username', 'required');
+        $this->form_validation->set_rules('password', 'password', 'required');
        if( $this->form_validation->run() == FALSE){
            $this->load->view('BackEnd/FormTambah/TambahManageKelas', $data);
         }else{

@@ -17,8 +17,13 @@
   <link rel="stylesheet" href="<?= base_url(); ?>assest/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+<style>
+  .body{
+    margin-top = 200px !important;
+  }
+</style>
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page body">
 <div class="login-box">
   <div class="login-logo">
     <a href=""><b>SIAKAD</b>SMK</a>
@@ -27,7 +32,6 @@
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">Silahkan Login Terlebih Dahulu</p>
-    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('Success'); ?>"></div>
       <form action="" method="post">
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Username" name="username">
@@ -57,7 +61,7 @@
 
       <div class="social-auth-links text-center mb-3">
         <p>- Atau -</p>
-        <a href="<?= base_url(); ?>Registration" class="btn btn-block btn-primary">
+        <a href="<?= base_url(); ?>Auth/Registration" class="btn btn-block btn-primary">
           <i class="fab fa-account   mr-2"></i> Register Sebagai Member Baru
         </a>
       </div>
@@ -70,6 +74,7 @@
 </div>
 <!-- /.login-box -->
 
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('Success'); ?>"></div>
 <!-- jQuery -->
 <script src="<?= base_url(); ?>assest/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -82,9 +87,9 @@ const flashdata = $('.flash-data').data('flashdata');
 
 if(flashdata){
   Swal({
-      title: 'Selamat',
-      text : 'Akun Anda ' + flashdata,
-      type :'success'
+      title: '',
+      text : '' + flashdata,
+      type :'information'
   });
 }
 

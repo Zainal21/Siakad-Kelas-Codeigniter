@@ -9,6 +9,10 @@ class ManageGuru extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->model('M_ManageJurusan');
         $this->load->model('M_ManageMapel');
+        if(!$this->session->userdata('name'))
+        {
+            redirect('Auth');
+        }
     }
     public function index()
     {

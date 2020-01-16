@@ -12,7 +12,7 @@
                 <div class="col">
                   <div class="card">
                     <div class="card-body">
-                      <a href="" class="btn btn-primary float-left"><i class="fas fa-plus"></i> Tambah Data</a>
+                      <a href="<?= base_url(); ?>ManageMapel/Tambah" class="btn btn-primary float-left"><i class="fas fa-plus"></i> Tambah Data</a>
                          <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                       <tr>

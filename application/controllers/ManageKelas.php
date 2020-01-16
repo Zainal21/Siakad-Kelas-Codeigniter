@@ -8,6 +8,10 @@ class ManageKelas extends CI_Controller {
         $this->load->model('M_ManageKelas');
         $this->load->library('form_validation');
         $this->load->model('M_ManageJurusan');
+        if(!$this->session->userdata('name'))
+        {
+            redirect('Auth');
+        }
     }   
     public function index()
     {

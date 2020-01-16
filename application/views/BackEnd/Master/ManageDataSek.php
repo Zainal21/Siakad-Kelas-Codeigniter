@@ -11,7 +11,6 @@
                 <div class="col">
                   <div class="card">
                     <div class="card-body">
-                        <a href="<?= base_url(); ?>ManageDataSekolah/TambahData" class="btn btn-primary float-left"><i class="fas fa-plus"></i> Tambah Data</a>
                         <a href="<?= base_url(); ?>ManageDataSekolah/TambahData" class="btn btn-info float-left ml-3"><i class="fas fa-edit"></i> Ubah</a>
                         <div class="container mt-5">
                         <div class="row">
@@ -31,17 +30,7 @@
                               </div>
                            <?= form_close() ?>
                           </div>
-                          <div class="col-4">
-                            <div class="card">
-                              <div class="card-body">
-                                <h5 class="card-text">Nama Sekolah</h5>
-                                <h5 class="card-text">Alamat Sekolah</h5>
-                                <h5 class="card-text">Jenjang Sekolah</h5>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                         
+                          
                          </div>
                         </div>
                  </div>

@@ -7,6 +7,10 @@ class ManageMapel extends CI_Controller {
         parent::__construct();
         $this->load->model('M_ManageMapel');
         $this->load->library('form_validation');
+        if(!$this->session->userdata('name'))
+        {
+            redirect('Auth');
+        }
     }
     public function index()
     {
@@ -18,6 +22,10 @@ class ManageMapel extends CI_Controller {
     {
         $this->m_ManageMapel->hapus($id);
         redirect('ManageMapel');
+    }
+    public function Tambah()
+    {
+        $this->load->view('BackEnd/FormTambah/TambahManageMapel');
     }
    
     

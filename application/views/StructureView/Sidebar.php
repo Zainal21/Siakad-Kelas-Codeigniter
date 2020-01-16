@@ -2,7 +2,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="" class="brand-link">
+    <a href="<?= base_url(); ?>Dashboard" class="brand-link">
       <i class="fas fa- fa-graduation-cap ml-4"></i>
       <span class="brand-text font-weight-light ml-4">  SIAKAD SMK</span>
     </a>

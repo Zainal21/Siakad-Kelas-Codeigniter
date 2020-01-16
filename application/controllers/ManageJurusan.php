@@ -8,6 +8,10 @@ class ManageJurusan extends CI_Controller {
         
         $this->load->model('M_ManageJurusan');
         $this->load->library('form_validation');
+        if(!$this->session->userdata('name'))
+        {
+            redirect('Auth');
+        }
     }
     public function index()
     {

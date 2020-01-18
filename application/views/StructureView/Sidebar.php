@@ -58,7 +58,7 @@
                     </a>
               </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link ">
+                    <a href="<?= base_url(); ?>ManageSiswa" class="nav-link ">
                       <i class="fas fa-edit nav-icon"></i>
                       <p>Manage Siswa</p>
                     </a>
@@ -69,12 +69,7 @@
                       <p>Manage Mapel</p>
                     </a>
               </li>
-               <li class="nav-item">
-                    <a href="<?= base_url(); ?>ManageMapel" class="nav-link ">
-                      <i class="fas fa-edit nav-icon"></i>
-                      <p>Manage Jenis Pembayaran</p>
-                    </a>
-              </li>
+            
                <li class="nav-item">
                     <a href="<?= base_url(); ?>ManageMapel" class="nav-link ">
                       <i class="fas fa-edit nav-icon"></i>
@@ -91,15 +86,7 @@
             </ul>
           </li>
           
-          
-       <li class="nav-item has-treeview menu-open">
-            <a href="" class="nav-link active">
-              <i class="nav-icon fas fa-bookmark"></i>
-              <p>
-              Pembayaran
-              </p>
-            </a>
-        </li>
+     
           <li class="nav-item has-treeview menu-open">
             <a href="" class="nav-link active">
               <i class="nav-icon fas fa-tags"></i>

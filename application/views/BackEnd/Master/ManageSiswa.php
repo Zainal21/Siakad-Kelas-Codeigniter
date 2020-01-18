@@ -15,15 +15,23 @@
                          <table id="example1" class="table table-bordered ">
                                 <thead>
                                       <tr>
-                                          <th>NIP</th>
+                                          <th>Nis</th>
                                           <th>Nama</th>
-                                          <th>Kode Mapel</th>
-                                          <th>Kode Jurusan</th>
-                                          <th>manage</th>
+                                          <th>Kelas</th>
+                                         
+                                          <th>Manage</th>
                                       </tr>
                                 <thead>
                                   <tbody>
+                                  <?php foreach($siswa as $sw){ ?>
+                                    <tr>
+                                      <td><?= $sw['nis']; ?></td>
+                                      <td><?= $sw['nama']; ?></td>
+                                      <td><?= $sw['nama_kelas']; ?></td>
+                                    <td><a href="<?= base_url(); ?>ManageSiswa/Update/<?= $sw['id'] ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a><a href="<?= base_url(); ?>ManageSiswa/delete/<?= $sw['id'] ?>" class="btn btn-md btn-danger ml-2"><i class="fas fa-trash"></i></a></td>
                                     
+                                    </tr>
+                                    <?php } ?>
                                   </tbody>
                       </table> 
                 </div>

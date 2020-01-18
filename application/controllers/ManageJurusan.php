@@ -41,7 +41,20 @@ class ManageJurusan extends CI_Controller {
              redirect('ManageJurusan');
              json_encode($delete);
     }
-   
-    
+
+    public function Update($id)
+    {
+        $this->form_validation->set_rules('kode_jurusan', 'Kode Jurusan', 'required');
+        $data['jurusan'] = $this->db->get_where('jurusan', ['kode_jurusan' => $id])->row_array();
+        $this->form_validation->set_rules('nama_jurusan', 'Kode Jurusan', 'required');
+       if( $this->form_validation->run() == FALSE){
+           $this->load->view('BackEnd/FormUbah/F_UbahManageJurusan',$data);
+        }else{
+            $this->M_ManageJurusan->Ubah($id);
+             $this->session->set_flashdata('Data', 'Ditambahkan');
+             redirect('ManageJurusan');
+        }
+    }
+ 
     
 }

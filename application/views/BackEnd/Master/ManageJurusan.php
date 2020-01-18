@@ -28,7 +28,7 @@
                                      <tr>
                                           <td><?= $jrs['kode_jurusan'] ?></td>
                                           <td><?= $jrs['nama_jurusan'] ?></td>
-                                          <td><a href="" class="btn btn-primary"><i class="fas fa-edit"></i></a><a href="<?= base_url(); ?>ManageJurusan/Hapus/<?= $jrs['kode_jurusan'] ?>" class="btn btn-md btn-danger ml-2"><i class="fas fa-trash"></i></a></td>
+                                          <td><a href="<?= base_url(); ?>ManageJurusan/Update/<?= $jrs['kode_jurusan']; ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a><a href="<?= base_url(); ?>ManageJurusan/Hapus/<?= $jrs['kode_jurusan'] ?>" class="btn btn-md btn-danger ml-2"><i class="fas fa-trash"></i></a></td>
                                       </tr>
                                       <?php } ?>
                                   </tbody>

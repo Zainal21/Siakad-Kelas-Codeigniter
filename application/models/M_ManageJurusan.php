@@ -15,4 +15,14 @@ class M_ManageJurusan extends CI_Model {
       ];
       $this->db->insert('jurusan', $data);
     }
+      public function Ubah($id)
+    {
+      $data = [
+        
+        'kode_jurusan' => $this->input->post('kode_jurusan'),
+        'nama_jurusan' => $this->input->post('nama_jurusan')
+      ];
+      $this->db->where('kode_jurusan', $id);
+      $this->db->insert('jurusan', $data);
+    }
 }

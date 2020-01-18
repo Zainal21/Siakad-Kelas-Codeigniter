@@ -1,6 +1,7 @@
- <?php $data['judul'] = 'Manage Mapel' ?>
+ <?php $data['judul'] = 'Manage Kelas' ?>
+<?php $data['judulkon'] = 'Manage Kelas' ?>
 <?php $this->load->view('StructureView/Header', $data); ?>
-<?php $this->load->view('StructureView/HeaderContent'); ?>
+<?php $this->load->view('StructureView/HeaderContent', $data); ?>
 <?php $this->load->view('StructureView/Sidebar'); ?>
 
  <!-- Main content -->
@@ -13,20 +14,19 @@
                     <div class="card-body">
                       <div class="row">
                         <div class="col-8">
-                          <form action="<?= base_url(); ?>ManageMapel/Tambah" method="post">
+                          <form action="" method="post">
                               <div class="form-group">
                                 <label for="exampleFormControlInput1">Kode Mapel</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Kode mapel" name="kode_mapel">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="kode Mapel" name="kode_mapel" value="<?= $mapel['kode_mapel'] ?>">
                                  <small id="emailHelp" class="form-text text-danger "><?= form_error('kode_mapel') ?></small>
                               </div>     
                               <div class="form-group">
                                 <label for="exampleFormControlInput1">Nama Mapel</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Mapel" name="nama_mapel">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Mapel" name="nama_mapel" value="<?= $mapel['nama_mapel'] ?>">
                                   <small id="emailHelp" class="form-text text-danger "><?= form_error('nama_mapel') ?></small>
                               </div>
-                                <button type="submit" class="btn btn-primary">Tambah</button>
+                                <button type="submit" class="btn btn-primary">Ubah</button>
                                 <a href="<?= base_url(); ?>ManageMapel" class="btn btn-primary">Kembali</a>
-                       
                             </form>
                         </div>
                       </div>

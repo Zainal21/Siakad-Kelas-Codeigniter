@@ -8,7 +8,24 @@ class M_ManageMapel extends CI_Model {
     }
     public function hapus($id)
     {
-      $this->db->where('id', $id);
+      $this->db->where('kode_mapel', $id);
       $this->db->delete('mapel');
+    }
+    public function Insert()
+    {
+      $data = [
+        'kode_mapel' => $this->input->post('kode_mapel'),
+        'nama_mapel' => $this->input->post('nama_mapel')
+      ];
+      $this->db->insert('mapel', $data);
+    }
+    public function Ubah($id)
+    {
+   $data = [
+        'kode_mapel' => $this->input->post('kode_mapel'),
+        'nama_mapel' => $this->input->post('nama_mapel')
+      ];
+      $this->db->where('kode_mapel', $id);
+      $this->db->update('mapel', $data);
     }
 }

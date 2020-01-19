@@ -7,11 +7,17 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
+          <div class="flash-data" data-flashdata="<?= $this->session->flashdata('Data'); ?>"></div>
+      
+        
               <div class="row">
                 <div class="col">
                   <div class="card">
+                  <div class="card-text text-center pt-2 mt-2">
+                    <h2 class="">Data Siswa</h2>
+                  </div>
                     <div class="card-body">
-                      <a href="" class="btn btn-primary float-left"><i class="fas fa-plus"></i> Tambah Data</a>
+                      <a href="<?= base_url(); ?>ManageSiswa/TambahSiswa" class="btn btn-primary float-left"><i class="fas fa-plus"></i> Tambah Data</a>
                          <table id="example1" class="table table-bordered ">
                                 <thead>
                                       <tr>
@@ -46,5 +52,17 @@
 
 <?php $this->load->view('StructureView/Footer'); ?>
   
+  <script src="<?= base_url(); ?>assest/js/sweetalert2.all.min.js"></script>
+<script>
+const flashdata = $('.flash-data').data('flashdata');
 
+if(flashdata){
+  Swal({
+      title: 'Data Siswa',
+      text : 'Berhasil ' + flashdata,
+      type :'success'
+  });
+}
+
+</script>
 

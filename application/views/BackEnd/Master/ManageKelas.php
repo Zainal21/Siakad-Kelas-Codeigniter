@@ -13,6 +13,10 @@
               <div class="row">
                 <div class="col">
                   <div class="card">
+                   <div class="card">
+                  <div class="card-text text-center pt-2 mt-2">
+                    <h2 class="">Data Kelas</h2>
+                  </div>
                     <div class="card-body">
                       <a href="<?= base_url(); ?>ManageKelas/Tambah" class="btn btn-primary float-left"><i class="fas fa-plus"></i> Tambah Data</a>
                          <table id="example1" class="table table-bordered table-striped">
@@ -20,7 +24,7 @@
                                       <tr>
                                           <th>Kode Kelas</th>
                                           <th>Kelas</th>
-                                          <th>Kode Jurusan</th>
+                                          <th>Jurusan</th>
                                           <th>Manage</th>
                                       </tr>
                                 <thead>
@@ -29,7 +33,7 @@
                                      <tr>
                                           <td><?= $kls['kode_kelas'] ?></td>
                                           <td><?= $kls['nama_kelas'] ?></td>
-                                          <td><?= $kls['kode_jurusan'] ?></td>
+                                          <td><?= $kls['nama_jurusan'] ?></td>
                                           <td><a href="<?= base_url(); ?>ManageKelas/Ubah/<?= $kls['kode_kelas'] ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a><a href="<?= base_url(); ?>ManageKelas/Hapus/<?= $kls['kode_kelas'] ?>" class="btn btn-md btn-danger ml-2"><i class="fas fa-trash"></i></a></td>
                                       </tr>
                                       <?php } ?>

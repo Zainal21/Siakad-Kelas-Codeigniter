@@ -13,6 +13,10 @@
               <div class="row">
                 <div class="col">
                   <div class="card">
+                   <div class="card">
+                  <div class="card-text text-center pt-2 mt-2">
+                    <h2 class="">Data Mapel</h2>
+                  </div>
                     <div class="card-body">
                       <a href="<?= base_url(); ?>ManageMapel/Tambah" class="btn btn-primary float-left"><i class="fas fa-plus"></i> Tambah Data</a>
                          <table id="example1" class="table table-bordered table-striped">

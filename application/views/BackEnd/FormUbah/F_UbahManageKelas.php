@@ -17,7 +17,7 @@
                           <form action="" method="post">
                               <div class="form-group">
                                 <label for="exampleFormControlInput1">Kode Kelas</label>
-                                <input type="hidden" class="form-control" id="exampleFormControlInput1" placeholder="kode Kelas" name="kode_kelas" value="<?= $kelas['kode_kelas'] ?>">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="kode Kelas" name="kode_kelas" value="<?= $kelas['kode_kelas'] ?>">
                                  <small id="emailHelp" class="form-text text-danger "><?= form_error('kode_kelas') ?></small>
                               </div>     
                               <div class="form-group">

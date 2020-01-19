@@ -26,15 +26,15 @@
                                   <small id="emailHelp" class="form-text text-danger "><?= form_error('nama_kelas') ?></small>
                               </div>
                                  <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Kode Jurusan</label>
+                                    <label for="exampleFormControlSelect1">Nama Jurusan</label>
                                     <select class="form-control" id="exampleFormControlSelect1" name="kode_jurusan">
                                     <?php foreach($jurusan as $j) { ?>
-                                      <option value="<?= $j['kode_jurusan'] ?>"><?= $j['kode_jurusan']?></option>
+                                      <option value="<?= $j['kode_jurusan'] ?>"><?= $j['nama_jurusan']?></option>
                                       <?php } ?>
                                     </select>
                                   </div>
                                 <button type="submit" class="btn btn-primary">Tambah</button>
-                                <a href="<?= base_url(); ?>ManageGuru" class="btn btn-primary">Kembali</a>
+                                <a href="<?= base_url(); ?>ManageKelas" class="btn btn-primary">Kembali</a>
                             </form>
                         </div>
                       </div>

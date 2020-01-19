@@ -2,15 +2,16 @@
 defined('BASEPATH') OR exit('dilarang mengakses file ini');
 
 class M_ManageKelas extends CI_Model {
-    public function get()
+    public function FetchData()
     {
-      return $this->db->get('kelas')->result_array();
+      return $this->db->from('kelas') 
+      ->join('jurusan', 'kelas.kode_jurusan=jurusan.kode_jurusan')->get()->result_array();
     }
     public function getbyid($id)
     {
       return $this->db->get_where('kelas', ['kode_kelas' => $id])->row_array();
     }
-    public function tambah()
+    public function Tambah()
     {
       $data = [
         

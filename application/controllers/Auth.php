@@ -33,6 +33,8 @@ class Auth extends CI_Controller {
            $this->load->view('Login');
         } else{
            $this->login();
+            $this->session->set_flashdata('Success', 'Login Anda Berhasil, Mohon coba tunggu');
+                   
         }
     }
 
@@ -48,9 +50,27 @@ class Auth extends CI_Controller {
                     'name' => $Auth_user['name'],
                     'role' => $Auth_user['role']
                 ];
-                $this->session->set_userdata($ses);
-                 $this->session->set_flashdata('Success', 'Anda Berhasil Login, Mohon Tunggu Sebentar');
-                redirect('Dashboard');
+
+                    if($Auth_user['role'] == 'Admin'){
+
+                    $this->session->set_userdata($ses);
+                    $this->session->set_flashdata('Success', 'Anda Berhasil Login, Mohon Tunggu Sebentar');
+                    redirect('Dashboard');
+                    }elseif($Auth_user['role'] == 'Siswa'){
+                        $ses = [
+                        'name' => $Auth_user['name'],
+                        'role' => $Auth_user['role']
+                    ];
+                    $this->session->set_userdata($ses);
+                        redirect('MenuSiswa');
+                    }else{
+                           $ses = [
+                        'name' => $Auth_user['name'],
+                        'role' => $Auth_user['role']
+                    ];
+                    $this->session->set_userdata($ses);
+                        redirect('MenuGuru');
+                    }
                 }
                 else{
                         $this->session->set_flashdata('Success', 'Login Anda gagal, Mohon coba kembali');

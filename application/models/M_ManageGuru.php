@@ -4,7 +4,12 @@ defined('BASEPATH') OR exit('dilarang mengakses file ini');
 class M_ManageGuru extends CI_Model {
     public function get()
     {
-      return $this->db->get('guru')->result_array();
+      $this->db->select('*');
+      $this->db->from('guru G');
+      $this->db->join('mapel M', 'M.kode_mapel=G.kode_mapel', 'left');
+      $this->db->join('jurusan J', 'J.kode_jurusan=G.kode_jurusan', 'left');
+      $query = $this->db->get();
+      return $query->result_array();
     }
    
     public function hapus($id)

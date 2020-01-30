@@ -11,6 +11,7 @@
               <div class="row">
                 <div class="col">
                   <div class="card">
+                 <h1 class= "text-center mt-2 ">Form Tambah Data Jurusan</h1>
                     <div class="card-body">
                       <div class="row">
                         <div class="col-8">

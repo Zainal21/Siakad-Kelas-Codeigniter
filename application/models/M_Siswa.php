@@ -27,6 +27,17 @@ class M_Siswa extends CI_Model{
       ];
       $this->db->insert('siswa', $data);
     }
+    public function update($id)
+    {
+        $data = [
+        'id' => $this->input->post('id'),
+        'nis' => $this->input->post('nis'),
+        'nama' => $this->input->post('nama'),
+        'kode_kelas' => $this->input->post('kelas')
+      ];
+      $this->db->where('id', $id);
+      $this->db->update('siswa', $data);
+    }
 
 
 }

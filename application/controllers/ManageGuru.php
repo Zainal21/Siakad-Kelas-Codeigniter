@@ -39,7 +39,8 @@ class ManageGuru extends CI_Controller {
        if( $this->form_validation->run() == FALSE){
            $this->load->view('BackEnd/FormTambah/TambahManageGuru', $data);
         }else{
-            $this->M_ManageGuru->tambah();
+           $data=  $this->M_ManageGuru->tambah();
+           json_encode($data);
              $this->session->set_flashdata('Data', 'Ditambahkan');
              redirect('ManageGuru');
         }

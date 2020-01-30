@@ -33,13 +33,14 @@ class Auth extends CI_Controller {
            $this->load->view('Login');
         } else{
            $this->login();
-            $this->session->set_flashdata('Success', 'Login Anda Berhasil, Mohon coba tunggu');
+        
                    
         }
     }
 
     private function login()
     {
+        // buat variable untuk cek username dan password login
         $username = $this->input->post('username');
         $password = $this->input->post('password');
 
@@ -50,9 +51,8 @@ class Auth extends CI_Controller {
                     'name' => $Auth_user['name'],
                     'role' => $Auth_user['role']
                 ];
-
+            //cek rolenya dan siapkan data dalam session
                     if($Auth_user['role'] == 'Admin'){
-
                     $this->session->set_userdata($ses);
                     $this->session->set_flashdata('Success', 'Anda Berhasil Login, Mohon Tunggu Sebentar');
                     redirect('Dashboard');
@@ -61,6 +61,7 @@ class Auth extends CI_Controller {
                         'name' => $Auth_user['name'],
                         'role' => $Auth_user['role']
                     ];
+                    
                     $this->session->set_userdata($ses);
                         redirect('MenuSiswa');
                     }else{

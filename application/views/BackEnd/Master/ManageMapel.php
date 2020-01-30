@@ -32,7 +32,7 @@
                                      <tr>
                                           <td><?= $mpl['kode_mapel'] ?></td>
                                           <td><?= $mpl['nama_mapel'] ?></td>
-                                          <td><a href="<?= base_url(); ?>ManageMapel/Update/<?= $mpl['kode_mapel'] ?>" class="btn btn-primary"><i class="fas fa-edit"></i></a><a href="<?= base_url(); ?>ManageMapel/delete/<?= $mpl['kode_mapel']; ?>" class="btn btn-md btn-danger ml-2"><i class="fas fa-trash"></i></a></td>
+                                          <td><a href="<?= base_url(); ?>ManageMapel/Update/<?= $mpl['kode_mapel'] ?>" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a><a href="<?= base_url(); ?>ManageMapel/delete/<?= $mpl['kode_mapel']; ?>" class="btn btn-sm btn-danger ml-2"><i class="fas fa-trash"></i></a></td>
                                       </tr>
                                       <?php } ?>
                                   </tbody>

@@ -64,5 +64,22 @@ if(flashdata){
   });
 }
 
+  var base = '<?= base_url();?>';
+
+
+function delete(){
+  $.ajax({
+    url: base + 'ManageSiswa/Delete',
+    dataType: 'json',
+    success: function(data){
+      console.log(data)
+    },
+    error:function(){
+      console.log('no response');
+    }
+
+  });
+}
+
 </script>
 

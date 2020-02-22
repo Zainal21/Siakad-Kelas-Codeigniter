@@ -11,8 +11,14 @@
               <div class="row">
                 <div class="col">
                   <div class="card">
+                  <!-- <div class="card-titte m-4">
+                    <h2 class="mb-2 text-center">Tambah Data Guru</h3>
+                  </div> -->
                     <div class="card-body">
                       <div class="row">
+                      
+                      <h1 class= "text-center">Form Tambah Data Guru</h1>
+                    
                         <div class="col-8">
                           <form action="<?= base_url(); ?>ManageGuru/TambahData" method="post">
                               <div class="form-group">

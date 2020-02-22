@@ -66,6 +66,20 @@ if(flashdata){
   });
 }
 
+
+var base = '<?= base_url(); ?>'
+function delete(){
+  $.ajax({
+    type:'POST',
+    url :  base +'ManageGuru/delete',
+    dataType:'json',
+    data : {"id":id},
+    contentType:'application/json',
+    success:function(response){
+      console.log(response);
+    }
+  });
+}
 </script>
   
 

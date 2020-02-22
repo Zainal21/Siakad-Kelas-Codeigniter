@@ -29,7 +29,8 @@ class ManageSiswa extends CI_Controller{
     }
     public function delete($id)
     {
-        $this->M_Siswa->Delete($id);
+        $data = $this->M_Siswa->Delete($id);
+        json_encode($data);
         $this->session->set_flashdata('Data', 'Berhasil Ditambahkan');
         redirect('ManageSiswa');
     }
